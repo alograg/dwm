@@ -92,7 +92,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY,                       XK_Escape, uit,            {0} },
+	{ MODKEY,                       XK_Escape, quit,           {0} },
 	{ MODKEY,                       XK_F5,     spawn,          SHCMD("setxkbmap fr") },
 	{ MODKEY,                       XK_F6,     spawn,          SHCMD("setxkbmap es") },
 };
