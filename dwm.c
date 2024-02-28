@@ -1800,7 +1800,7 @@ tile(Monitor *m)
 			h = (m->wh - my) / (MIN(n, m->nmaster) - i);
 			if (n == 1)
 				resize(c, m->wx - c->bw, m->wy - c->bw, m->ww, m->wh, False);
-			else if (i + 1 == m->nmaster)
+			else if (i + 1 == m->nmaster) // Last master
 				resize(c, m->wx - c->bw, m->wy + my - c->bw, mw - c->bw * !(mw == m->ww), h, 0);
 			else
 				resize(c, m->wx - c->bw, m->wy + my - c->bw, mw - c->bw * !(mw == m->ww), h - c->bw, 0);
@@ -1808,7 +1808,7 @@ tile(Monitor *m)
 				my += HEIGHT(c) - c->bw;
 		} else {
 			h = (m->wh - ty) / (n - i);
-			if (i + 1 == n)
+			if (i + 1 == n) // Last tile
 				resize(c, m->wx + mw - c->bw, m->wy + ty - c->bw, m->ww - mw, h, 0);
 			else
 				resize(c, m->wx + mw - c->bw, m->wy + ty - c->bw, m->ww - mw, h - c->bw, 0);
