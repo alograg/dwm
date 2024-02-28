@@ -207,7 +207,6 @@ static void setmfact(const Arg *arg);
 static void setup(void);
 static void seturgent(Client *c, int urg);
 static void showhide(Client *c);
-static int singularborder_baradjustment(Client *c);
 static void spawn(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
@@ -1733,12 +1732,6 @@ showhide(Client *c)
 		showhide(c->snext);
 		XMoveWindow(dpy, c->win, WIDTH(c) * -2, c->y);
 	}
-}
-
-int
-singularborder_baradjustment(Client *c)
-{
-	return c->bw * !(c->mon->showbar && topbar);
 }
 
 void
