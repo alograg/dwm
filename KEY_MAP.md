@@ -14,7 +14,7 @@
 |Super + Return           |Toggle master          |
 |Super + Tab              |Last tag               |
 |Super + c                |Kill window            |
-|Super + t                |Tiled []= layout       |
+|Super + Shift + t        |Tiled []= layout       |
 |Super + f                |Float ><> layout       |
 |Super + m                |Monocle [M] layout     |
 |Super + g                |Gapless Grid ### layout|

@@ -65,8 +65,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *rebootcmd[]  = { "sudo", "shutdown", "-r", "+0", NULL };
-static const char *shutdowncmd[]  = { "sudo", "shutdown", "+0", NULL };
+static const char *rebootcmd[]  = { "shutdown", "-r", "+0", NULL };
+static const char *shutdowncmd[]  = { "shutdown", "+0", NULL };
+static const char *browsercmd[]  = { "google-chrome-stable", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
@@ -109,6 +110,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Escape, quit,           {0} },
 	{ MODKEY,                       XK_End,    spawn,          {.v = shutdowncmd} },
 	{ MODKEY,                       XK_Delete, spawn,          {.v = rebootcmd} },
+	{ MODKEY,                       XK_Home,   spawn,          {.v = browsercmd} },
 	{ MODKEY,                       XK_F5,     spawn,          SHCMD("setxkbmap latam") },
 	{ MODKEY,                       XK_F6,     spawn,          SHCMD("setxkbmap fr") },
 };
