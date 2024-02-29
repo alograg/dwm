@@ -48,6 +48,7 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 	{ "###",      gaplessgrid },
 	{ "|+|",      tatami },
+	{ "[][]=",    tilewide },
 };
 
 /* key definitions */
@@ -87,6 +88,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -105,8 +107,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,                       XK_Escape, quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_End,    spawn,          {.v = shutdowncmd} },
-	{ MODKEY|ShiftMask,             XK_Delete, spawn,          {.v = rebootcmd} },
+	{ MODKEY,                       XK_End,    spawn,          {.v = shutdowncmd} },
+	{ MODKEY,                       XK_Delete, spawn,          {.v = rebootcmd} },
 	{ MODKEY,                       XK_F5,     spawn,          SHCMD("setxkbmap latam") },
 	{ MODKEY,                       XK_F6,     spawn,          SHCMD("setxkbmap fr") },
 };
